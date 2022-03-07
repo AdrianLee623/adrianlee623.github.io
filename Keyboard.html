@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Virtual Keyboard</title>
+	<link rel = "stylesheet" href= "keyboard.css">
+	<script src="keyscript.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+	<div class="keycontainer">
+		<div class="keyboard-main">
+			<div class="keyboard-keys">
+				<div class="keyrow">
+					<button type="button" class="keys" onclick="key('~')">~</button>
+					<button type="button" class="keys" onclick="key('1')">1</button>
+					<button type="button" class="keys" onclick="key('2')">2</button>
+					<button type="button" class="keys" onclick="key('3')">3</button>
+					<button type="button" class="keys" onclick="key('4')">4</button>
+					<button type="button" class="keys" onclick="key('5')">5</button>
+					<button type="button" class="keys" onclick="key('6')">6</button>
+					<button type="button" class="keys" onclick="key('7')">7</button>
+					<button type="button" class="keys" onclick="key('8')">8</button>
+					<button type="button" class="keys" onclick="key('9')">9</button>
+					<button type="button" class="keys" onclick="key('0')">0</button>
+					<button type="button" class="keys" onclick="key('-')">-</button>
+					<button type="button" class="keys" onclick="key('=')">=</button>
+					<button type="button" class="keys backspace-key" onclick="backspace()">Backspace</button>
+				</div>
+				<div class="keyrow">
+					<button type="button" class="keys tab-key">Tab</button>
+					<button type="button" class="keys" onclick="key('q')">Q</button>
+					<button type="button" class="keys" onclick="key('w')">W</button>
+					<button type="button" class="keys" onclick="key('e')">E</button>
+					<button type="button" class="keys" onclick="key('r')">R</button>
+					<button type="button" class="keys" onclick="key('t')">T</button>
+					<button type="button" class="keys" onclick="key('y')">Y</button>
+					<button type="button" class="keys" onclick="key('u')">U</button>
+					<button type="button" class="keys" onclick="key('i')">I</button>
+					<button type="button" class="keys" onclick="key('o')">O</button>
+					<button type="button" class="keys" onclick="key('p')">P</button>
+					<button type="button" class="keys" onclick="key('[')">[</button>
+					<button type="button" class="keys" onclick="key(']')">]</button>
+					<button type="button" class="keys slash-key" onclick="key('|')">|</button>
+				</div>
+				<div class="keyrow">
+					<button type="button" class="keys caps-key">Caps</button>
+					<button type="button" class="keys" onclick="key('a')">A</button>
+					<button type="button" class="keys" onclick="key('s')">S</button>
+					<button type="button" class="keys" onclick="key('d')">D</button>
+					<button type="button" class="keys" onclick="key('f')">F</button>
+					<button type="button" class="keys" onclick="key('g')">G</button>
+					<button type="button" class="keys" onclick="key('h')">H</button>
+					<button type="button" class="keys" onclick="key('j')">J</button>
+					<button type="button" class="keys" onclick="key('k')">K</button>
+					<button type="button" class="keys" onclick="key('l')">L</button>
+					<button type="button" class="keys" onclick="key(';')">;</button>
+					<button type="button" class="keys" onclick="symbol()">'</button>
+					<button type="button" class="keys enter-key" onclick="enter()">Enter</button>
+				</div>
+				<div class="keyrow">
+					<button type="button" class="keys shift-key lshift">Shift</button>
+					<button type="button" class="keys" onclick="key('z')">Z</button>
+					<button type="button" class="keys" onclick="key('x')">X</button>
+					<button type="button" class="keys" onclick="key('c')">C</button>
+					<button type="button" class="keys" onclick="key('v')">V</button>
+					<button type="button" class="keys" onclick="key('b')">B</button>
+					<button type="button" class="keys" onclick="key('n')">N</button>
+					<button type="button" class="keys" onclick="key('m')">M</button>
+					<button type="button" class="keys" onclick="key(',')">,</button>
+					<button type="button" class="keys" onclick="key('.')">.</button>
+					<button type="button" class="keys" onclick="key('/')">/</button>
+					<button type="button" class="keys" onclick="key('?')">?</button>
+					<button type="button" class="keys shift-key rshift">Shift</button>
+				</div>
+				<div class="keyrow">
+					<button type="button" class="keys ctrl-key lctrl">Ctrl</button>
+					<button type="button" class="keys win-key">Win</button>
+					<button type="button" class="keys alt-key lalt">Alt</button>
+					<button type="button" class="keys space-key" onclick="space()"></button>
+					<button type="button" class="keys alt-key ralt">Alt</button>
+					<button type="button" class="keys fn-key">Fn</button>
+					<button type="button" class="keys ctrl-key rctrl">Ctrl</button>
+				</div>
+			</div>
+		</div>
+		<textarea class="keytext" id="message"></textarea>
+		<button type="button" class="clearbutton" onclick="cleartext()">Clear</button>
+	</div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
